@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local Storage Demo</title>
+</head>
+<body>
+<h1>Person's Name</h1>
+<div id="personName"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Retrieve data from local storage
+    var personName = localStorage.getItem("PersonName");
+
+    // Display the person's name
+    if (personName) {
+        document.getElementById("personName").innerText = "Person's Name: " + personName;
+    } else {
+        document.getElementById("personName").innerText = "No person's name stored in local storage.";
+    }
+});
+</script>
+</body>
+</html>
